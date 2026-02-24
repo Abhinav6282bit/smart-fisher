@@ -1,0 +1,203 @@
+/* ===== Buyer-specific styles ===== */
+
+/* Search bar */
+.search-bar-wrapper {
+    position: relative;
+    margin-bottom: 20px;
+    max-width: 420px;
+}
+
+/* Browse Fish Grid */
+.buyer-fish-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 18px;
+}
+
+.buyer-fish-card {
+    background: rgba(15, 23, 42, 0.85);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.buyer-fish-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 36px rgba(14, 165, 233, 0.14);
+    border-color: rgba(14, 165, 233, 0.3);
+}
+
+.buyer-fish-img {
+    width: 100%;
+    height: 140px;
+    background: linear-gradient(135deg, rgba(14, 165, 233, 0.12), rgba(6, 214, 160, 0.08));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 52px;
+    overflow: hidden;
+}
+
+.buyer-fish-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.buyer-fish-body {
+    padding: 16px;
+}
+
+.buyer-fish-name {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    text-transform: capitalize;
+    margin-bottom: 8px;
+}
+
+.buyer-fish-meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.76rem;
+    color: var(--text-secondary);
+    margin-bottom: 10px;
+}
+
+.buyer-fish-price {
+    font-size: 1.4rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--primary-light), var(--accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.buyer-fish-price span {
+    font-size: 0.8rem;
+    font-weight: 500;
+    opacity: 0.7;
+}
+
+.buyer-fish-total {
+    font-size: 0.72rem;
+    color: var(--text-secondary);
+    margin-bottom: 12px;
+}
+
+.bid-now-btn {
+    width: 100%;
+    padding: 11px;
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    color: #fff;
+    border: none;
+    border-radius: 9px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.bid-now-btn:hover {
+    box-shadow: 0 6px 20px rgba(14, 165, 233, 0.3);
+    transform: translateY(-1px);
+}
+
+.bid-now-btn.live {
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+}
+
+.bid-now-btn.live:hover {
+    box-shadow: 0 6px 20px rgba(245, 158, 11, 0.3);
+}
+
+/* Live Auctions Grid */
+.live-auctions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 18px;
+}
+
+.live-auction-card {
+    background: rgba(15, 23, 42, 0.85);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+.live-auction-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(14, 165, 233, 0.12);
+}
+
+.live-auction-card.urgent {
+    border-color: rgba(239, 68, 68, 0.35);
+    background: rgba(239, 68, 68, 0.03);
+}
+
+.lac-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 16px;
+}
+
+.lac-fish-name {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    text-transform: capitalize;
+}
+
+.lac-seller {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    margin-top: 3px;
+}
+
+.lac-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 8px;
+    margin-bottom: 16px;
+    background: rgba(10, 18, 35, 0.5);
+    border-radius: 10px;
+    padding: 12px;
+}
+
+.lac-stat {
+    text-align: center;
+}
+
+.lac-stat span {
+    display: block;
+    font-size: 0.68rem;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+}
+
+.lac-stat strong {
+    font-size: 0.95rem;
+    color: var(--text-primary);
+    font-weight: 700;
+}
+
+.urgent-text {
+    color: #f87171 !important;
+    animation: urgentPulse 1s ease-in-out infinite;
+}
+
+@keyframes urgentPulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+}
